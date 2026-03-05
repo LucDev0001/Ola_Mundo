@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevMaster - Aprenda Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+    <div class="min-h-screen flex flex-col items-center justify-center p-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="mb-6 flex justify-center">
+                <!-- Icone simples SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h1 class="text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+                Domine o Desenvolvimento Web
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed">
+                Uma plataforma completa, gratuita e 100% estática. 
+                Aprenda HTML, CSS, JS e Banco de Dados sem complicações.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="aula.html?slug=introducao-html" class="bg-primary text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Começar Agora
+                </a>
+                <a href="https://github.com/seu-usuario/Ola_Mundo" target="_blank" class="bg-white text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-all">
+                    Ver no GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

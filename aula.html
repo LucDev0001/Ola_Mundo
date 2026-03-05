@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula - DevMaster</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos para o conteúdo da aula (Markdown simulado) */
+        .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: #1e293b; }
+        .prose h3 { font-size: 1.25rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #334155; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #475569; }
+        .prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; }
+        .prose code { font-family: monospace; }
+    </style>
+</head>
+<body class="bg-slate-50 flex h-screen overflow-hidden">
+
+    <!-- Sidebar -->
+    <aside class="w-72 bg-white border-r border-slate-200 flex-col hidden md:flex">
+        <div class="p-6 border-b border-slate-100">
+            <a href="index.html" class="text-xl font-bold text-primary flex items-center gap-2">
+                &lt;/&gt; DevMaster
+            </a>
+        </div>
+        <nav class="flex-1 overflow-y-auto p-4" id="sidebar-nav">
+            <!-- Conteúdo injetado via JS -->
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+        <!-- Mobile Header -->
+        <div class="md:hidden bg-white border-b border-slate-200 p-4 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-primary">DevMaster</a>
+            <button onclick="document.querySelector('aside').classList.toggle('hidden'); document.querySelector('aside').classList.toggle('absolute'); document.querySelector('aside').classList.toggle('z-50'); document.querySelector('aside').classList.toggle('h-full');" class="text-slate-600">
+                Menu
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto p-8">
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-sm border border-slate-100 min-h-[500px]">
+                <div id="aula-header" class="mb-8 border-b border-slate-100 pb-6">
+                    <span id="aula-modulo" class="text-primary font-semibold text-sm uppercase tracking-wider">Módulo</span>
+                    <h1 id="aula-titulo" class="text-3xl font-bold text-slate-900 mt-2">Carregando...</h1>
+                </div>
+                <div id="aula-conteudo" class="prose max-w-none">
+                    <!-- Conteúdo da aula aqui -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dados.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
